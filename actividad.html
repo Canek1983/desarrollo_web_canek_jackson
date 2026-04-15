@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Actividad</title>
+
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<h1>Registro de Actividad</h1>
+
+<form id="form-actividad">
+
+  <!--IDENTIFICADOR-->  
+  <div>
+    <label>ID:</label>
+
+    <input type="text" id="id-numero" maxlength="9" size="9">
+    -
+
+    <input type="text" id="id-digito" maxlength="1" size="1">
+
+    <span id="error-id" style="color:red; display:none">ID inválido</span>
+  </div>
+
+
+  <div>
+    <label>Nombre de la actividad:</label>
+    <input type="text" id="nombre-actividad">
+    <span id="error-nombre-actividad" style="color:red; display:none">
+      Nombre inválido (mínimo 3 caracteres)
+    </span>
+  </div>
+
+  <!--ACTIVIDAD-->
+  <div>
+    <label>Tipo de actividad:</label>
+    <select id="tipo-actividad">
+      <option value="">Seleccione</option>
+      <option value="deportiva">Deportiva</option>
+      <option value="artistica">Artística</option>
+      <option value="tecnologica">Tecnológica</option>
+      <option value="social">Social</option>
+      <option value="otra">Otra</option>
+    </select>
+    <span id="error-tipo-actividad" style="color:red; display:none">
+      Seleccione tipo
+    </span>
+  </div>
+
+    <!-- FUNCIONARIO -->
+  <div id="campo-otra" style="display:none;">
+    <label>Especifique:</label>
+    <input type="text" id="otra-actividad">
+  </div>
+
+  <!--HORAS-->
+  <div>
+    <label>Horas semanales:</label>
+    <input type="number" id="horas-actividad" maxlength="2">
+    <span id="error-horas" style="color:red; display:none">
+      Debe ser un número entre 1 y 40
+    </span>
+  </div>
+
+  <!--DÍAS-->
+  <div>
+    <label>Días:</label>
+    <select id="dias">
+      <option value="">Seleccione</option>
+      <option>Lunes</option>
+      <option>Martes</option>
+      <option>Miércoles</option>
+      <option>Jueves</option>
+      <option>Viernes</option>
+      <option>Sábado</option>
+      <option>Domingo</option>
+    </select>
+  </div>
+
+  <!--ARCHIVO-->
+  <div>
+    <label>Subir archivo (foto o video):</label>
+    <input type="file" id="archivo">
+    <span id="error-archivo" style="color:red; display:none">
+      Debe subir al menos un archivo
+    </span>
+  </div>
+
+  <!-- LINK -->
+  <div>
+    <label>Enlace (opcional):</label>
+    <input type="text" id="link">
+  </div>
+
+  <!-- BOTÓN -->
+  <button type="submit">Registrar actividad</button>
+
+</form>
+
+<br>
+
+<a href="index.html">Volver al inicio</a>
+
+<script src="validador.js"></script>
+
+</body>

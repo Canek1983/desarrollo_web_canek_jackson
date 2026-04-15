@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lista de Miembros (Base estática)</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<h1>Lista de Miembros (100 registros)</h1>
+
+<div class="filtros">
+  <input type="text" id="filtroNombre" placeholder="Buscar por nombre">
+  <select id="filtroTipo">
+    <option value="">Todos</option>
+    <option value="alumno">Alumno</option>
+    <option value="academico">Académico</option>
+    <option value="funcionario">Funcionario</option>
+  </select>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th onclick="ordenar('nombre')">Nombre</th>
+      <th onclick="ordenar('tipo')">Tipo</th>
+      <th>Email</th>
+      <th>Celular</th>
+    </tr>
+  </thead>
+  <tbody id="tabla"></tbody>
+</table>
+
+<div id="paginacion" class="paginacion"></div>
+
+<script src="data.js"></script>
+<script src="validador.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.exito {
+  display: none;
+  color: green;
+  font-weight: bold;
+}
+
+.exito.visible {
+  display: block;
+}
+
+.error {
+  display: none;
+}
+
+.error.visible {
+  color: red;  
+  display: block;
+}
+
+body {
+  font-family: Arial;
+  margin: 40px;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #3498db; /* azul claro */
+  color:  white; /* texto oscuro para contraste */
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}

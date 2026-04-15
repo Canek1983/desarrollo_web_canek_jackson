@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Miembro</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<h1>Registro de Miembro</h1>
+
+<form id="form-miembro">
+
+  <div>
+    <label>RUT:</label>
+
+    <input type="text" id="id-numero"> - <input type="text" id="id-digito" size="1">
+    <span id="error-id-numero" class="error">RUT inválido. Debe ingresar un número válido.</span>
+    <span id="error-id-digito" class="error">RUT inválido. Debe ingresar un dígito varificador válido.</span>
+  </div>
+
+  <div>
+    <label>Nombre completo:</label>
+    <input type="text" id="nombre">
+    <span id="error-nombre" class="error">Nombre inválido</span>
+  </div>
+
+  <div>
+    <label>Celular:</label>
+    <input type="text" id="celular">
+    <span id="error-celular" class="error">Celular inválido</span>
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" id="email">
+    <span id="error-email" class="error">Email inválido. Debe ingresar una dirección de correo existente.</span>
+  </div>
+
+  <div>
+    <label>Tipo de miembro:</label>
+    <select id="tipo">
+      <option value="">Seleccione</option>
+      <option value="funcionario">Funcionario</option>
+      <option value="academico">Académico</option>
+      <option value="alumno">Alumno</option>
+    </select>
+    <span id="error-tipo" class="error">Seleccione tipo</span>
+  </div>
+
+  <!-- FUNCIONARIO -->
+  <div id="campo-funcionario" style="display:none;">
+    <label>Función:</label>
+    <select id="funcion">
+      <option value="">Seleccione</option>
+      <option>Secretaria</option>
+      <option>Contador</option>
+      <option>Mantenimiento</option>
+      <option>Administrativo</option>
+      <option>Soporte</option>
+      <option>Otro</option>
+    </select>
+  </div>
+
+  <!-- ACADÉMICO -->
+  <div id="campo-academico" style="display:none;">
+    <label>Área:</label>
+    <select id="area">
+      <option value="">Seleccione</option>
+      <option>Ciberseguridad</option>
+      <option>Desarrollo Web</option>
+      <option>Inteligencia Artificial</option>
+      <option>Computación Cuántica</option>
+      <option>Diseño de Redes</option>
+      <option>Ingeniería de Software</option>
+      <option>Programación</option>
+      <option>Otro</option>
+    </select>
+  </div>
+
+  <!-- ALUMNO -->
+  <div id="campo-alumno" style="display:none;">
+    <label>Semestre:</label>
+    <select id="semestre">
+      <option value="">Seleccione</option>
+      <option>I</option>
+      <option>II</option>
+      <option>III</option>
+      <option>IV</option>
+      <option>V</option>
+      <option>VI</option>
+      <option>VII</option>
+      <option>VIII</option>
+      <option>IX</option>
+      <option>X</option>
+    </select>
+  </div>
+
+  <button type="submit">Registrar</button>
+
+</form>
+<span id="mensaje-exito" class="exito">
+  Registro exitoso
+</span>
+
+<br>
+
+<a href="index.html">Volver al inicio</a>
+
+<script src="validador.js"></script>
+
+</body>
+</html>
